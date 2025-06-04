@@ -64,7 +64,7 @@ def main():
         print(f"Файл {template_path} не найден.")
         sys.exit(1)
     # Имя md-файла по умолчанию
-    output_md = sys.argv[2] if len(sys.argv) >= 3 else "README.md"
+    output_md = sys.argv[2] if len(sys.argv) >= 3 else "README_template.md"
 
     data = load_template(template_path)
     templates = data.get('zabbix_export', {}).get('templates', [])
